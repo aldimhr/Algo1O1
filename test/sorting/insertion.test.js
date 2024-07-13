@@ -119,3 +119,145 @@ test('sorting array 10 descending', () => {
     1000, 900, 800, 700, 600, 500, 400, 300, 200, 100,
   ]);
 });
+
+test('sorting letters array 1 ascending', () => {
+  expect(insertion(['S', 'O', 'R', 'T', 'E', 'X', 'A', 'M', 'P', 'L', 'E'], false)).toMatchObject([
+    'A',
+    'E',
+    'E',
+    'L',
+    'M',
+    'O',
+    'P',
+    'R',
+    'S',
+    'T',
+    'X',
+  ]);
+});
+
+test('sorting letters array 1 descending', () => {
+  expect(insertion(['S', 'O', 'R', 'T', 'E', 'X', 'A', 'M', 'P', 'L', 'E'], true)).toMatchObject([
+    'X',
+    'T',
+    'S',
+    'R',
+    'P',
+    'O',
+    'M',
+    'L',
+    'E',
+    'E',
+    'A',
+  ]);
+});
+
+test('sorting words array 1 ascending', () => {
+  expect(insertion(['bed', 'bug', 'dad', 'yes', 'zoo'], false)).toMatchObject([
+    'bed',
+    'bug',
+    'dad',
+    'yes',
+    'zoo',
+  ]);
+});
+
+test('sorting words array 1 descending', () => {
+  expect(insertion(['bed', 'bug', 'dad', 'yes', 'zoo'], true)).toMatchObject([
+    'zoo',
+    'yes',
+    'dad',
+    'bug',
+    'bed',
+  ]);
+});
+
+test('sorting words array 2 ascending', () => {
+  expect(insertion(['all', 'bad', 'bed', 'bug', 'dad'], false)).toMatchObject([
+    'all',
+    'bad',
+    'bed',
+    'bug',
+    'dad',
+  ]);
+});
+
+test('sorting words array 2 descending', () => {
+  expect(insertion(['all', 'bad', 'bed', 'bug', 'dad'], true)).toMatchObject([
+    'dad',
+    'bug',
+    'bed',
+    'bad',
+    'all',
+  ]);
+});
+
+test('sorting words array 3 ascending', () => {
+  expect(insertion(['apple', 'orange', 'banana', 'grape', 'pear'], false)).toMatchObject([
+    'apple',
+    'banana',
+    'grape',
+    'orange',
+    'pear',
+  ]);
+});
+
+test('sorting words array 3 descending', () => {
+  expect(insertion(['apple', 'orange', 'banana', 'grape', 'pear'], true)).toMatchObject([
+    'pear',
+    'orange',
+    'grape',
+    'banana',
+    'apple',
+  ]);
+});
+
+test('sorting words array 4 ascending', () => {
+  expect(insertion(['cat', 'dog', 'elephant', 'bird', 'ant'], false)).toMatchObject([
+    'ant',
+    'bird',
+    'cat',
+    'dog',
+    'elephant',
+  ]);
+});
+
+test('sorting words array 4 descending', () => {
+  expect(insertion(['cat', 'dog', 'elephant', 'bird', 'ant'], true)).toMatchObject([
+    'elephant',
+    'dog',
+    'cat',
+    'bird',
+    'ant',
+  ]);
+});
+
+test('sorting letters array 2 ascending', () => {
+  expect(insertion(['C', 'A', 'B', 'D', 'E', 'F', 'G', 'H', 'I', 'J'], false)).toMatchObject([
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+  ]);
+});
+
+test('sorting letters array 2 descending', () => {
+  expect(insertion(['C', 'A', 'B', 'D', 'E', 'F', 'G', 'H', 'I', 'J'], true)).toMatchObject([
+    'J',
+    'I',
+    'H',
+    'G',
+    'F',
+    'E',
+    'D',
+    'C',
+    'B',
+    'A',
+  ]);
+});

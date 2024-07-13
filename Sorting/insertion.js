@@ -6,6 +6,7 @@
  * - bandingkan nilainya
  * -- jika angka 1 > angka 2, maka swap
  * -- jika angka 1 < angka 2, maka cek angka selanjutnya
+ *
  * Contoh
  * 5,4,3,2
  * -- cek angka 5 dan 4
@@ -27,6 +28,7 @@
  * -- karena 3 > 2, maka swap
  * 6) 2,3,4,5
  * -- selesai
+ *
  */
 
 // order -> true DESC, false ASC
@@ -55,6 +57,10 @@ function insertion(array, order = false) {
 
   return array;
 }
+
+// let test = insertion(['a', 'z', 'b', 'd', 'e']);
+let test = insertion(['ab', 'ac', 'ae', 'ag', 'az']);
+console.log(test);
 
 /**
  * Helper sorting function
